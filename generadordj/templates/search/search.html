@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+        {%block chicho%}
+         {%if hola%}
+<table>
+        {%for d in hola%}
+
+<tr>
+        <th>{{d.name}}</th>
+</tr>
+
+        {%for l in d.lista%}
+<tr>
+        <td>{{l}}</td>
+</tr>
+
+        {%endfor%}
+        {%endfor%}
+    </table>
+        {%else%}
+        <p>why?</p>
+
+        {%endif%}
+        {%endblock%}
